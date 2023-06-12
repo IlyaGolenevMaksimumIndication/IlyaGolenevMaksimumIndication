@@ -1,0 +1,13 @@
+string = input("")
+
+
+
+def check_palindrome(string):
+    check_string = string[::-1]
+    if string == check_string:
+            print("True")
+    else:
+            print("False")
+    
+if __name__ == "__main__":
+    check_palindrome(string)
