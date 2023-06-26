@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</body>
+    
+
+ <h1> Заголовок первого уровня </h1>
+ <h2> Заголовок второго уровня </h2>
+ <h3> Заголовок третьего уровня </h3>
+ <h4> Заголовок четвертого уровня </h4>
+ <h5> Заголовок пятого уровня </h5>
+ <h6> Заголовок шестого уровня </h6>
+ <p align = "center" class = "paragraph-1">Hello</p>
+ <p class = "paragraph-2">World</p>
+ <p class = "paragraph-3">Any text</p>
+ <body>
+ <p><img src="istockphoto-475845856-1024x1024.jpg" align=”bottom”></p>
+</body>
+
+<p>hi,people</p>
+
+<style>
+    p {
+        text-align: center;
+        text-shadow: green 4px 2px 2px;
+        font-size: 24px;
+        font-size: italic;
+    } 
+</style>
+
+ <p>Hello</p>
+ <p>World</p>
+ <div>
+ <span>Hello</span>
+ <span>World</span>
+ </div>
+   
+ <ul>
+ <li>
+ 1
+ </li>
+ <li>
+ 2
+ </li>
+ <li>
+ 3
+ </li>
+ </ul>
+ 
+ </body>
+ </html>
+ 
