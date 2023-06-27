@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <title>Page 1</title>
+</head>
+<body>
+    <form action="">
+
+        <label for="field1">ФИО</label>
+        <input class="form-control" id="field1" type="text"/>
+       
+        <label for="field2">checkbox</label>
+        <input lass = "form-check-input" id="field2" type="checkbox"/>
+
+        <label for="field3">password</label>
+        <input class="form-control" id="field3" type="password"/>
+        
+
+        <label for="field4">message</label> 
+        <textarea name="comment" information="Расскажите обо всём, что вы о себе знаете" id="field4" type="message"></textarea>
+
+        <nav class="navbar navbar-light bg-light">
+            <form class="container-fluid">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </form>
+          </nav>
+
+
+
+        <input class="btn btn-success" type="button" value="Отправить форму"
+
+
+
+
+
+      <a class="link-underline-success" href="page2.html">Ссылка на Page 2</a>
+
+
+</form>
+</body>
+</html>
