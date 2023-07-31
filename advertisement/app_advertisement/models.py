@@ -28,7 +28,7 @@ class Advertisement(models.Model):
     )
 
     def __str__(self):
-        return self.title,self.price
+        return f"id = {self.id} title = {self.title} price = {self.price}"
     
     
                              
