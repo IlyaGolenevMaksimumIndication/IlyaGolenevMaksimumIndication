@@ -47,7 +47,7 @@ class Advertisement(models.Model):
     
             
 
-    @admin.display(description="Дата создания")
+    @admin.display(description="Дата редактирования")
     def updated_at(self):
         from django.utils import timezone
         if self.updated_at.date() == timezone.now().date():
