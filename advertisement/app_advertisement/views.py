@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
+    advertisements = advertisements.objects.all()
+    context = {'advertisements': advertisements}
     return render(request, "index.html")
 
 def top_sellers(request):
