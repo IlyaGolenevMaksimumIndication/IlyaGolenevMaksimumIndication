@@ -4,7 +4,7 @@ from django.utils.html import format_html
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
-DEFAULT = 'advertisement/to/static/img/adv.png'
+
 
 class Advertisement(models.Model):
     title = models.CharField(
@@ -35,18 +35,14 @@ class Advertisement(models.Model):
     image = models.ImageField(
         verbose_name="Изображение", 
         upload_to="advertisements/",
-        default=DEFAULT
+   
         
     )
     
-    user = models.ForeignKey(User, verbose_name="Пользователь", on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, verbose_name="Пользователь", on_delete=models.CASCADE)
 
 
-   
-def set_image_to_default(self):
-        set_image_to_default(save=True)
-        self.image = DEFAULT
-        self.save()
+
    
  
     
@@ -85,8 +81,10 @@ def updated_at(self):
 
 @admin.display(description="Мини фотка")
 def image_thumbnail(self):
-      return format_html('<img src="" />' % (self.image.url))
-    
+      if self.image:
+       return format_html('<img src={} style="width: 45px; height:45px;" />',  (self.image.url))
+      else:
+            return format_html('<span style="color: red;">Нету фото!</span>')
                              
     
 
