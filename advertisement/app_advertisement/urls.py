@@ -6,4 +6,5 @@ from .views import index, top_sellers, advertisementpost, register, login, profi
 urlpatterns = [
     path("index.html", index, name="main-page"),
     path("top-sellers.html",top_sellers,name="top_sellers"),
+    path("advertisement-post/", advertisementpost, name="post")
 ]

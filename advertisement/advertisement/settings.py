@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # our app
     'app_advertisement',
+    'app_auth'
 ]
 
 MIDDLEWARE = [
