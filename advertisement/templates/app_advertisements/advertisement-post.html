@@ -5,47 +5,12 @@
 Разместить Объявление
 {% endblock %}
 
+{% block active_3 %}active{% endblock %}
+
 {% block content %}
 
-<body>
 
 
-  <ul class="nav nav-pills sticky-top bg-white nav-fill">
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'main-page' %}">
-        <span style="font-weight: bold;">Главная</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="top-sellers.html"><span style="font-weight: bold;">Топ продавцов</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{% url 'adv-post' %}">
-        <span style="font-weight: bold;">Разместить объявление</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="register.html">
-        <span style="font-weight: bold;">Регистрация</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="login.html">
-        <span style="font-weight: bold;">Войти</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="profile.html">
-        <span style="font-weight: bold;">Профиль</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span style="font-weight: bold;">Выйти</span>
-      </a>
-    </li>
-  </ul>
   <div class="row">
     <div class="col" style="margin: 50px;">
       <div class="display-2">
@@ -53,13 +18,13 @@
       </div>
     </div>
   </div>
-<form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-<div class="row md-3 offset-sm-4">
-  {{ form.as_p }}
-</div>
 
-  
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="row md-3 offset-sm-4">
+    {{ form.as_p }}
+  </div>
+
       <div class="row mb-3 offset-sm-5">
         <div class="col">
           <button type="submit" class="btn btn-success">Принять</button>
@@ -67,9 +32,9 @@
       </div>
     </form>
   </div>
+
+{% endblock %}
+
 {% block scripts %}
-  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 {% endblock %}
-{% endblock %}
-</body>
-</html>

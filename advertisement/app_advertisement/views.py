@@ -1,14 +1,32 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, reverse
 from .forms import AdvertisementForm
+from django.contrib.auth import get_user_model
+from django.db.models import Count
+from django.urls import reverse_lazy
+
+from .models import Advertisement
+from .forms import AdvertisementForm
 
 def index(request):
-    advertisements = advertisements.objects.all()
-    context = {'advertisements': advertisements}
+    title = request.GET.get("query")
+    if title:
+        advertisements = Advertisement.objects.filter(title__icontains=title)
+    else:
+        advertisements = Advertisement.objects.all()
+        
+   
+    context = {'advertisements': advertisements, 'title': title}
     return render(request, "app_advertisements/index.html", context=context)
 
 def top_sellers(request):
-    return render(request, "app_advertisements/top-sellers.html")
+    users = users.objects.annotate(
+        adv_count=Count("advertisement")
+    ).order_by("-adv.count")
+    context = {
+        "users": users
+    }
+    return render(request, "app_advertisements/top-sellers.html", context=context)
 
 def advertisementpost(request):
     if request.method == "POST":
@@ -29,8 +47,12 @@ def advertisementpost(request):
     return render(request, "app_advertisements/advertisement-post.html")
 
 
-
-
+def advertisement_view(request, pk):
+    advertisement = Advertisement.objects.get(pk=pk)
+    context = {
+        "advertisement": advertisement
+    }
+    return render(request, "app_advertisements/advertisement.html", context=context)
 
 
 def register(request):
@@ -51,3 +73,4 @@ def advertisement(request):
 
 
 
+# __lt=100 - меньше gt больше

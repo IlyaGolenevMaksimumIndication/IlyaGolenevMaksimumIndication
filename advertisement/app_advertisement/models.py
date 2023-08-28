@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.utils.html import format_html
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 User = get_user_model()
 
@@ -90,6 +91,9 @@ def image_thumbnail(self):
 
 class Meta:
         db_table = 'advertisements'
+
+def get_absolute_url(self):
+      return reverse("adv", kwargs={"pk": self.pk})
 
    
 
